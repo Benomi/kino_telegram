@@ -1,15 +1,15 @@
-defmodule KinoSlack.MixProject do
+defmodule KinoTelegram.MixProject do
   use Mix.Project
 
   @version "0.1.0"
-  @description "Slack integration with Livebook"
+  @description "Telegram integration with Livebook"
 
   def project do
     [
-      app: :kino_slack,
+      app: :kino_telegram,
       version: @version,
       description: @description,
-      name: "KinoSlack",
+      name: "KinoTelegram",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -19,7 +19,7 @@ defmodule KinoSlack.MixProject do
   end
 
   def application do
-    [mod: {KinoSlack.Application, []}]
+    [mod: {KinoTelegram.Application, []}]
   end
 
   defp deps do
@@ -33,7 +33,7 @@ defmodule KinoSlack.MixProject do
   defp docs do
     [
       main: "components",
-      source_url: "https://github.com/livebook-dev/kino_slack",
+      source_url: "https://github.com/benomi/kino_telegram",
       source_ref: "v#{@version}",
       extras: ["guides/components.livemd"]
     ]
@@ -43,7 +43,7 @@ defmodule KinoSlack.MixProject do
     [
       licenses: ["Apache-2.0"],
       links: %{
-        "GitHub" => "https://github.com/livebook-dev/kino_slack"
+        "GitHub" => "https://github.com/benomi/kino_telegram"
       }
     ]
   end

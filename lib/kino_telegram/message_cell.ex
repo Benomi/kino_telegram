@@ -1,9 +1,9 @@
-defmodule KinoSlack.MessageCell do
+defmodule KinoTelegram.MessageCell do
   @moduledoc false
 
   use Kino.JS, assets_path: "lib/assets"
   use Kino.JS.Live
-  use Kino.SmartCell, name: "Slack message"
+  use Kino.SmartCell, name: "Telegram message"
 
   @impl true
   def init(attrs, ctx) do
