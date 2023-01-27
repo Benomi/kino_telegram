@@ -29,8 +29,8 @@ defmodule KinoTelegram.MessageCellTest do
     bot_token = System.fetch_env!("LB_TELEGRAM_BOT_TOKEN")
     chat_id = "channel/group id"
     message = "telegram message"
-    url = "/bot#{bot_token}/sendMessage?chat_id=#{chat_id}&text=#{message}"
-    response = Req.get!(req, url: URI.encode(url))
+    url = "/bot#{bot_token}/sendMessage"
+    response = Req.post!(req, url: url, form: [chat_id: chat_id, text: message])
 
     case response.body do
       %{"ok" => true} -> :ok
@@ -57,8 +57,8 @@ defmodule KinoTelegram.MessageCellTest do
     bot_token = System.fetch_env!("LB_TELEGRAM_BOT_TOKEN")
     chat_id = "channel/group id"
     message = "telegram message"
-    url = "/bot#{bot_token}/sendMessage?chat_id=#{chat_id}&text=#{message}"
-    response = Req.get!(req, url: URI.encode(url))
+    url = "/bot#{bot_token}/sendMessage"
+    response = Req.post!(req, url: url, form: [chat_id: chat_id, text: message])
 
     case response.body do
       %{"ok" => true} -> :ok

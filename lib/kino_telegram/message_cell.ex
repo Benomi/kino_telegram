@@ -58,9 +58,9 @@ defmodule KinoTelegram.MessageCell do
         chat_id = unquote(attrs["chat_id"])
         message = unquote(attrs["message"])
 
-        url = "/bot#{bot_token}/sendMessage?chat_id=#{chat_id}&text=#{message}"
+        url = "/bot#{bot_token}/sendMessage"
 
-        response = Req.get!(req, url: URI.encode(url))
+        response = Req.post!(req, url: url, form: [chat_id: chat_id, text: message])
 
         case response.body do
           %{"ok" => true} -> :ok
