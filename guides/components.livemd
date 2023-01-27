@@ -2,7 +2,7 @@
 
 ```elixir
 Mix.install([
-  {:kino_telegram, "~> 0.1.0"},
+  {:kino_telegram, "~> 0.1.1"},
   {:req, "~> 0.3.0"}
 ])
 ```
