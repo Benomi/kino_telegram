@@ -24,10 +24,11 @@ Mix.install([
 
 - Add the bot to your Telegram channel/group with message sending rights
 
-- To get the **id** of your channel/group:
-  - First send a message to the channel/group
-  - Then go to this URL `https://api.telegram.org/bot<your-bot-token>/getUpdates` (replace `<your-bot-token>` with your bot token)
-  - Copy the `chat.id` value of your channel/group
+- If your channel/group is public, you can use the **username** of your channel/group as the **id** of your channel/group if not:
+  - To get the **id** of your channel/group:
+    - First send a message to the channel/group
+    - Then go to this URL `https://api.telegram.org/bot<your-bot-token>/getUpdates` (replace `<your-bot-token>` with your bot token)
+    - Copy the `chat.id` value of your channel/group
 
 - Create a "Telegram message" smart cell in your Livebook and fill in the channel/group id(username) & bot token
 
